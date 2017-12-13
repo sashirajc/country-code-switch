@@ -1,0 +1,33 @@
+{
+  "name": "country-code-switch",
+  "version": "1.0.0",
+  "description": "Nodejs package to switch between different country formats ()\u001b[DISO Alpha 2, ISO Alpha 3, ISO Numeric Code,Name)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sashirajc/country-code-switch.git"
+  },
+  "keywords": [
+    "country",
+    "iso-country-code"
+  ],
+  "author": "Sashiraj Chandrasekaran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sashirajc/country-code-switch/issues"
+  },
+  "homepage": "https://github.com/sashirajc/country-code-switch#readme",
+  "devDependencies": {
+    "nodemon": "^1.12.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "expect.js": "^0.3.1",
+    "requests": "^0.2.2",
+    "superagent": "^3.8.2",
+    "swagger-tools": "^0.10.3"
+  }
+}
