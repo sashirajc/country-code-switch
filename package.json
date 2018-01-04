@@ -4,7 +4,8 @@
   "description": "Nodejs package to switch between different country formats ()\u001b[DISO Alpha 2, ISO Alpha 3, ISO Numeric Code,Name)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./tests/unitTests.js",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
