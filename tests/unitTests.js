@@ -114,7 +114,7 @@ describe('Unit Test Cases', function() {
 
     it('ISONumtoName - Bahrain - Negative test', function(done) {
         var val = countryCodeConverter.ISONumtoName('BAHRAIN');
-        expect(val).to.eql('Provide a country code to convert to Name');
+        expect(val).to.eql('Provide a valid country code to convert to Name');
         done()
     })
 
@@ -151,6 +151,42 @@ describe('Unit Test Cases', function() {
     it('ISONametoNum - Benin', function(done) {
         var val = countryCodeConverter.ISONametoNum('BENIN');
         expect(val).to.eql('204');
+        done()
+    })
+
+    it('ISONumtoISO3 - Invalid country code to ISO3',function(done){
+        var val = countryCodeConverter.ISONumtoISO3('509')
+        expect(val).to.eql('Invalid Country Code');
+        done()
+    })
+
+    it('ISONumtoISO2 - Invalid country code to ISO2',function(done){
+        var val = countryCodeConverter.ISONumtoISO2('542')
+        expect(val).to.eql('Invalid Country Code');
+        done()
+    })
+
+    it('Check for common countries - Philippines',function(done){
+        var val = countryCodeConverter.ISO2toISO3('PH')
+        expect(val).to.eql('PHL');
+        done()
+    })
+
+    it('Check for common countries - Singapore',function(done){
+        var val = countryCodeConverter.ISO2toISO3('SG')
+        expect(val).to.eql('SGP');
+        done()
+    })
+
+    it('Check for common countries - United States',function(done){
+        var val = countryCodeConverter.ISO2toISO3('US')
+        expect(val).to.eql('USA');
+        done()
+    })
+
+    it('Check for common countries - United Kingdom',function(done){
+        var val = countryCodeConverter.ISO2toISO3('GB')
+        expect(val).to.eql('GBR');
         done()
     })
 
